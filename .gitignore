@@ -1,0 +1,5 @@
+env/
+
+lista_tarefas/__pycache__/
+
+db.sqlite3
