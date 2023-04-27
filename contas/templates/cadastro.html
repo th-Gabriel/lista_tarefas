@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../../static/css/auth/cadastro.css">
+</head>
+<body>
+    <div>
+        {% if error_msg %}
+        <div class="error_msg">{{ error_msg }}</div>
+        {% endif %}
+        <div class="cadastro_form">
+            <form method="post">
+                {% csrf_token %}
+                <label for="nome">NOME:</label>
+                <input type="text" name="nome"><br>
+                <label for="sobrenome">SOBRENOME:</label>
+                <input type="text" name="sobrenome"><br>
+                <label for="email">EMAIL:</label>
+                <input type="email" name="email" required><br>
+                <label for="username">USUÁRIO:</label>
+                <input type="text" name="username" required><br>
+                <label for="password">SENHA:</label>
+                <input type="password" name="password" required><br> 
+                <button type="submit">CADASTRAR</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
